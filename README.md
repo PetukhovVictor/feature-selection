@@ -4,8 +4,8 @@ Program for feature selection using feature frequncy information.
 
 ## Program arguments
 
-- --input (i-): input file with feature list sorted by frequncy
-- --output (o-): output file with selected feature list
+- **--input (i-)**: input file with feature list sorted by frequncy
+- **--output (o-)**: output file with selected feature list
 
 ## Supported feature selectors
 
