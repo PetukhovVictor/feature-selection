@@ -7,6 +7,11 @@ Program for feature selection using feature frequncy information.
 - **--input (i-)**: input file with feature list sorted by frequncy
 - **--output (o-)**: output file with selected feature list
 
+Example of use:
+```
+python3 main.py -i features_sorted.json -o features_selected.json
+```
+
 ## Supported feature selectors
 
 ### Ends selector
