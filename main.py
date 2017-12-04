@@ -16,14 +16,14 @@ output = args.output[0]
 
 criteria = [
     {
-        'type': 'bottom',
+        'type': 'tail',
         'params': {
             'by': 'value',
             'bound': 50
         }
     },
     {
-        'type': 'top',
+        'type': 'head',
         'params': {
             'by': 'value',
             'bound': 50000
@@ -33,7 +33,7 @@ criteria = [
         'type': 'derivative_bounds',
         'params': {
             'value': math.tan(math.pi / 4),
-            'deviation': 0.178
+            'deviation': 0.5
         }
     }
 ]

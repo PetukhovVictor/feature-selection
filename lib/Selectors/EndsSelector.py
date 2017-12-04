@@ -3,22 +3,22 @@ class EndsSelector:
         self.end_type = end_type
 
     def get_residue_by_order(self, features, bound):
-        if self.end_type == 'top':
+        if self.end_type == 'head':
             return features[:len(features) - bound]
-        elif self.end_type == 'bottom':
+        elif self.end_type == 'tail':
             return features[:bound]
         else:
             raise Exception('Unsupported EndsSelector type')
 
     def get_residue_by_value(self, features, bound):
-        if self.end_type == 'top':
+        if self.end_type == 'head':
             index = 0
             for feature in reversed(features):
                 if feature[1] <= bound:
                     break
                 index += 1
             return features[:len(features) - index]
-        elif self.end_type == 'bottom':
+        elif self.end_type == 'tail':
             index = 0
             for feature in features:
                 if feature[1] >= bound:
