@@ -14,7 +14,7 @@ class DerivativeBoundsSelector:
         dfdx = f.derivative()
         dydx = dfdx(x_lin)
         indexes = np.where(
-            (dydx > params['value'] - params['deviation']) & (dydx < params['value'] + params['deviation']))[0]
+            (dydx > params['point'] - params['deviation']) & (dydx < params['point'] + params['deviation']))[0]
 
         if len(indexes) == 0:
             return features

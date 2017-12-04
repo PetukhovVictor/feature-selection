@@ -32,7 +32,7 @@ criteria = [
     {
         'type': 'derivative_bounds',
         'params': {
-            'value': math.tan(math.pi / 4),
+            'point': math.tan(math.pi / 4),
             'deviation': 0.5
         }
     }
