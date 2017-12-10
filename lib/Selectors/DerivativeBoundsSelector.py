@@ -1,22 +1,14 @@
-import numpy as np
-from scipy import interpolate
-
-
 class DerivativeBoundsSelector:
     def select(self, features, params):
-        x_lin = np.linspace(0, 1, len(features))
-        y = []
+        features_selected = []
+        feature_prev = None
         for feature in features:
-            y.append(feature[1])
+            if feature_prev:
+                discrete_derivative = feature_prev[1] - feature[1]
 
-        f = interpolate.CubicSpline(x_lin, y)
+                if discrete_derivative < params['point'] - params['deviation'] or discrete_derivative > params['point'] + params['deviation']:
+                    features_selected.append(feature)
 
-        dfdx = f.derivative()
-        dydx = dfdx(x_lin)
-        indexes = np.where(
-            (dydx > params['point'] - params['deviation']) & (dydx < params['point'] + params['deviation']))[0]
+            feature_prev = feature
 
-        if len(indexes) == 0:
-            return features
-
-        return features[0:indexes[0]] + features[:indexes[len(indexes) - 1]:len(features) - 1]
+        return features_selected

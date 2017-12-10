@@ -4,8 +4,8 @@ from .Selectors.DerivativeBoundsSelector import DerivativeBoundsSelector
 
 class FeatureSelector:
     supported_selectors = {
-        'top': EndsSelector('top'),
-        'bottom': EndsSelector('bottom'),
+        'head': EndsSelector('head'),
+        'tail': EndsSelector('tail'),
         'derivative_bounds': DerivativeBoundsSelector()
     }
 

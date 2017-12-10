@@ -26,14 +26,14 @@ criteria = [
         'type': 'head',
         'params': {
             'by': 'value',
-            'bound': 50000
+            'bound': 100000
         }
     },
     {
         'type': 'derivative_bounds',
         'params': {
             'point': math.tan(math.pi / 4),
-            'deviation': 0.5
+            'deviation': 3
         }
     }
 ]
