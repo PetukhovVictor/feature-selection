@@ -68,8 +68,40 @@ This selector can clipping features whose values mapped to the values of the der
 
 ## Input data
 
-Program required features list with sorting by frequncy (list of pair: feature name and feature value).
+Program required features map: "feature name" - "feature value".
 
+Example:
+```
+{
+   "RETURN:DOT_QUALIFIED_EXPRESSION:IDENTIFIER":47575,
+   "THEN:DOT_QUALIFIED_EXPRESSION:IDENTIFIER":74185,
+   "THEN:RETURN:IDENTIFIER":4111,
+   "IF:RETURN:IDENTIFIER":4620,
+   "RETURN:DOT":19444,
+   "RETURN:DOT_QUALIFIED_EXPRESSION:DOT":34104,
+   "THEN:DOT_QUALIFIED_EXPRESSION:DOT":46137,
+   "RETURN:VALUE_ARGUMENT_LIST:REFERENCE_EXPRESSION":39958,
+   "RETURN:VALUE_ARGUMENT_LIST:RPAR":22982,
+   "RETURN:CALL_EXPRESSION:RPAR":27579,
+   "THEN:RBRACE":33671,
+   "IF:RBRACE":41584,
+   "THEN:BLOCK:RBRACE":34530,
+   "IF:BLOCK:RBRACE":42313,
+   "BLOCK:BLOCK:RBRACE":55548,
+   "BLOCK:RETURN:if":1468,
+   "RETURN:IF:WHITE_SPACE":12403,
+   "RETURN:LPAR":14068,
+   "RETURN:IF:LPAR":1748,
+   "BLOCK:RETURN:LPAR":14361,
+   "RETURN:CONDITION":1442,
+   "RETURN:IF:CONDITION":1738,
+   "BLOCK:RETURN:CONDITION":1468
+}
+```
+
+## Output data
+
+Selected feature list of pair: feature name and feature value
 Example:
 ```
 [
@@ -85,7 +117,3 @@ Example:
   ["BINARY_EXPRESSION:VALUE_ARGUMENT_LIST:else", 5043]
 ]
 ```
-
-## Output data
-
-Selected feature list of same format.
