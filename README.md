@@ -4,12 +4,12 @@ Program for feature selection using feature frequncy information.
 
 ## Program arguments
 
-- **--input (i-)**: input file with feature list sorted by frequncy
+- **--input (i-)**: input file with features map
 - **--output (o-)**: output file with selected feature list
 
 Example of use:
 ```
-python3 main.py -i features_sorted.json -o features_selected.json
+python3 main.py -i features.json -o features_selected.json
 ```
 
 ## Supported feature selectors
