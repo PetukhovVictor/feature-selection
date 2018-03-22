@@ -4,8 +4,8 @@ Program for feature selection using feature frequncy information.
 
 ## Program arguments
 
-- **--input (i-)**: input file with features map
-- **--output (o-)**: output file with selected feature list
+- `-i`, `--input`: input file with features map
+- `-o`, `--output`: output file with selected feature list
 
 Example of use:
 ```
@@ -23,9 +23,9 @@ This selector can select features from head or tail of features with sorting by 
 - tail: cut features from tail features list with sorting by frequncy.
 
 #### Parameters
-- **by = 'value'**: feature selection with specified value bound after or before which features will be selected;
-- **by = 'order'**: same, but order bound;
-- **bound**: value or order bound after or before which features will be selected.
+- `by = 'value'`: feature selection with specified value bound after or before which features will be selected;
+- `by = 'order'`: same, but order bound;
+- `bound`: value or order bound after or before which features will be selected.
 
 #### Examples
 ```
@@ -52,8 +52,8 @@ This selector can select features from head or tail of features with sorting by 
 This selector can clipping features whose values mapped to the values of the derivative, which do not exceed a specified distance from the specified point ( e.g. tan(Pi / 4) ).
 
 #### Parameters
-- **point**: the point from which the deviation of the derivative will be calculated;
-- **deviation** = max derivative deviation.
+- `point`: the point from which the deviation of the derivative will be calculated;
+- `deviation` = max derivative deviation.
 
 #### Examples
 ```
