@@ -4,6 +4,8 @@
 
 The new version selects not only from the ngram list, but also from all files of the specified folder.
 
+And the new version on Kotlin :)
+
 **Current version is no longer supported.**
 
 Program for feature selection using feature frequncy information.
